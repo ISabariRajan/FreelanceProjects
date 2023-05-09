@@ -24,7 +24,7 @@ class Notepad:
         self.txtarea = StringVar()
         self.__thisTextArea = Text(self.__frame)
         # To add scrollbar
-        self.__thisScrollBar = Scrollbar(self.__thisTextArea)	
+        self.__thisScrollBar = Scrollbar(self.__thisTextArea, orient="vertical")
 
         # Set icon
         try:
@@ -67,8 +67,9 @@ class Notepad:
         # self.__frame.grid_columnconfigure(0, weight=1)
 
         # Add controls (widget)
-        self.__thisTextArea.grid(sticky = N + E + S + W)
-        # self.__thisScrollBar.grid(side=RIGHT,fill=Y)
+        self.__frame.grid(sticky =(N, E, S, W))
+        self.__thisTextArea.grid(row=1, column=0)
+        self.__thisScrollBar.grid(row=1, column=1)
         # self.__thisScrollBar.grid(row=0,column=1,sticky=NS)			
 
         # # Scrollbar will adjust automatically according to the content	
