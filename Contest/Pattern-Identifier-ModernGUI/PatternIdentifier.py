@@ -1,10 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
-from typing import Optional, Tuple, Union
 import customtkinter
 
-from datetime import datetime
-import time
 import Utils
 
 from nltk import tokenize, download as nltk_download
